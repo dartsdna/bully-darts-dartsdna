@@ -87,8 +87,11 @@ function handleAnswer(button) {
   window.setTimeout(() => {
     if (currentScreen === 3) {
       const resultKey = buildResultKey();
-      const publicSlug = window.DARTSDNA_RESULT_ROUTES?.[resultKey];
-      if (!publicSlug) {
+      const position = { rear: 'R', front: 'F', middle: 'M' }[answers.grip];
+      const release = { clean: 'C', loose: 'L', tight: 'T', inconsistent: 'I' }[answers.release];
+      const alignment = answers.alignment === 'level' ? 'L' : 'O';
+      const publicSlug = position + answers.fingers + release + alignment;
+      if (!position || !release) {
         console.error('No result page was found for this answer combination.');
         return;
       }
@@ -99,7 +102,7 @@ function handleAnswer(button) {
         release: answers.release,
         alignment: answers.alignment,
       });
-      window.location.href = `/results/${publicSlug}/index.html`;
+      window.location.href = `/results/index.html?code=${publicSlug}`;
       return;
     }
     showScreen(currentScreen + 1);
