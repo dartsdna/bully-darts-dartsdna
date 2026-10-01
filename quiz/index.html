@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bully Darts × DartsDNA Quiz</title>
+    <link rel="stylesheet" href="/quiz/styles.css" />
+    <script defer src="../assets/analytics.js"></script>
+  </head>
+  <body>
+    <main class="quiz-shell">
+      <header class="quiz-header">
+        <img src="/assets/partner/bully-header.png" alt="Bully Darts × DartsDNA">
+      </header>
+
+      <section class="progress-wrap" aria-label="Quiz progress">
+        <div class="progress-dots" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+
+      <section class="question-screen is-active" data-screen="0">
+        <button class="back-button" type="button" data-back-home>← Back</button>
+        <p class="question-count">QUESTION 1 OF 4</p>
+        <h1>Where do you grip the dart?</h1>
+
+        <div class="answer-list">
+          <button type="button" class="answer-button" data-key="grip" data-value="front">
+            Front (near the point)
+          </button>
+          <button type="button" class="answer-button" data-key="grip" data-value="middle">
+            Middle (centre of the barrel)
+          </button>
+          <button type="button" class="answer-button" data-key="grip" data-value="rear">
+            Rear (near the stem)
+          </button>
+        </div>
+      </section>
+
+      <section class="question-screen" data-screen="1">
+        <button class="back-button" type="button" data-back>← Back</button>
+        <p class="question-count">QUESTION 2 OF 4</p>
+        <h1>How many fingers (including your thumb) do you use?</h1>
+
+        <div class="answer-list answer-list--short">
+          <button type="button" class="answer-button" data-key="fingers" data-value="2">
+            2
+          </button>
+          <button type="button" class="answer-button" data-key="fingers" data-value="3">
+            3
+          </button>
+          <button type="button" class="answer-button" data-key="fingers" data-value="4">
+            4+
+          </button>
+        </div>
+      </section>
+
+      <section class="question-screen" data-screen="2">
+        <button class="back-button" type="button" data-back>← Back</button>
+        <p class="question-count">QUESTION 3 OF 4</p>
+        <h1>How does your dart leave your hand?</h1>
+        <p class="helper-copy">
+          This refers to how the dart feels as it leaves your hand — whether it comes out smooth,
+          early, forced, or varies between throws.
+        </p>
+
+        <div class="answer-list">
+          <button type="button" class="answer-button" data-key="release" data-value="loose">
+            Loose (early release)
+          </button>
+          <button type="button" class="answer-button" data-key="release" data-value="tight">
+            Tight (late release)
+          </button>
+          <button type="button" class="answer-button" data-key="release" data-value="inconsistent">
+            Inconsistent
+          </button>
+          <button type="button" class="answer-button" data-key="release" data-value="clean">
+            Clean
+          </button>
+        </div>
+      </section>
+
+      <section class="question-screen" data-screen="3">
+        <button class="back-button" type="button" data-back>← Back</button>
+        <p class="question-count">QUESTION 4 OF 4</p>
+        <h1>Are your fingers level on the dart?</h1>
+
+        <div class="level-images">
+          <button type="button" class="level-choice" data-key="alignment" data-value="level">
+            <img src="/quiz/assets/level.png" alt="Level fingers on the dart" />
+          </button>
+          <button type="button" class="level-choice" data-key="alignment" data-value="not-level">
+            <img src="/quiz/assets/not-level.png" alt="Not level fingers on the dart" />
+          </button>
+        </div>
+      </section>
+
+          </main>
+
+    <script src="/quiz/result-slugs.js"></script>
+    <script src="/quiz/script.js"></script>
+  </body>
+</html>
